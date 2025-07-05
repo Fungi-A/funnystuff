@@ -20,15 +20,27 @@
             EJS_startOnLoaded = true;
             EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
             EJS_gameUrl = "MTsPO.nes";
+            EJS_Buttons = {
+                playPause: false,
+                restart: false,
+                mute: false,
+                settings: false,
+                fullscreen: false,
+                saveState: false,
+                loadState: false,
+                screenRecord: false,
+                gamepad: false,
+                cheat: false,
+                volume: false,
+                saveSavFiles: false,
+                loadSavFiles: false,
+                quickSave: false,
+                quickLoad: false,
+                screenshot: false,
+                cacheManager: false,
+                exitEmulation: false,
+            }
         </script>
         <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
-        <script>
-            window.addEventListener('load', () => {
-            const controls = document.querySelector('.ejs-controls');
-            if (controls) {
-                controls.remove();
-            }
-        });
-        </script>
     </body>
 </html>
