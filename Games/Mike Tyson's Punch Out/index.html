@@ -42,5 +42,14 @@
             };
         </script>
         <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+        <script>
+        window.addEventListener('load', () => {
+            const toolbar = document.querySelector('.ejs-toolbar');
+            if (toolbar) {
+                toolbar.style.display = 'none';
+            }
+        });
+    </script>
     </body>
 </html>
