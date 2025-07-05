@@ -24,6 +24,7 @@
                 playPause: { visible: false },
                 restart: { visible: false },
                 mute: { visible: false },
+                unmute: { visible: false },
                 settings: { visible: false },
                 fullscreen: { visible: false },
                 saveState: { visible: false },
@@ -38,18 +39,10 @@
                 quickLoad: { visible: false },
                 screenshot: { visible: false },
                 cacheManager: { visible: false },
-                exitEmulation: { visible: false }
+                exitEmulation: { visible: false },
+                menubar: { visible: false}
             };
         </script>
         <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
-
-        <script>
-        window.addEventListener('load', () => {
-            const toolbar = document.querySelector('.ejs-toolbar');
-            if (toolbar) {
-                toolbar.style.display = 'none';
-            }
-        });
-    </script>
     </body>
 </html>
