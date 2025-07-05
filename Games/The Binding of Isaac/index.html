@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Binding of Isaac</title>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <meta charset="utf8">
+  <style>
+    html, body {
+      background-color: #000 !important;
+      color: #fff;
+      height: 100%;
+      margin: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body style="margin: 0px"><div id="container" style="width: 100vw; height: 100vh"></div><script type="text/javascript">function play() {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    player.config = {"autoplay": "on","splashScreen": false,"unmuteOverlay": "hidden","quality": "medium"}
+    const container = document.getElementById('container');
+    container.appendChild(player);
+    player.style.cssText = 'width:100%; height: 100%;';
+    player.style.display = 'block';
+    player.load("https://fungi-a.github.io/funnystuff/Games/The%20Binding%20of%20Isaac/TBOI.swf").then(() => {
+      window.parent.postMessage({ type: 'ruffleready' }, '*');
+    });
+}
+play();</script></body>
+</html>
