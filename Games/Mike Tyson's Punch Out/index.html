@@ -1,35 +1,34 @@
 <html>
-<head>
-  <title>Mike Tyson's Punch Out</title>
-  <style>
-    .ejs-controls,
-    .ejs-ui,
-    .ejs-footer {
-      display: none !important;
-    }
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
-    #game {
-      height: 100vh;
-      width: 100vw;
-    }
-  </style>
-</head>
-<body>
-  <div id="game"></div>
-  <script>
-    EJS_player = "#game";
-    EJS_core = "nes";
-    EJS_gameName = "MTsPO";
-    EJS_color = "#000000";
-    EJS_startOnLoaded = true;
-    EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-    EJS_gameUrl = "MTsPO.nes";
-  </script>
-  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
-</body>
+    <head>
+        <title>Mike Tyson's Punch Out</title>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width:100%;height:100%;max-width:100%">
+            <div id="game"></div>
+        </div>
+        <script>
+            EJS_player = "#game";
+            EJS_core = "nes";
+            EJS_gameName = "MTsPO";
+            EJS_color = "#000000";
+            EJS_startOnLoaded = true;
+            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+            EJS_gameUrl = "MTsPO.nes";
+        </script>
+        <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+            const controls = document.querySelector('.ejs-controls');
+            if (controls) {
+                controls.remove();
+            }
+        });
+        </script>
+    </body>
 </html>
